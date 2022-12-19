@@ -1,7 +1,7 @@
 # Swagger UI Express Subtages
 
 This package produces a Swagger UI layout with endpoints grouped into a hierarhical list based on tags with
-(optional) special delimiter characters to denote hierarchy. Delimiter characters are `|` and `:`. FYI - It's modified version of [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express). Please refer the documentation for module implementaation with express.
+(optional) special delimiter characters to denote hierarchy. Delimiter characters are `|` and `:`. FYI - It's modified version of [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express). Please refer the documentation for module implementation with express.
 
 
 ## Usage
@@ -60,3 +60,19 @@ tags:
 
 ![Subtags Output](https://github.com/prabha-coder/swagger-ui-express-subtags/blob/main/assets/Pet_tags_and_subtags_output.png?raw=true)
 
+```yaml
+tags:
+- name: Store
+  description: Get information about the store
+- name: Store|Orders
+  description: Endpoints for managing orders in the store
+- name: Store|Orders|Create
+- name: Store|Orders|View
+- name: Store|Orders|Delete
+- name: Store|Inventory
+  description: Endpoints for managing store inventory
+- name: Store|Inventory|View
+
+```
+
+![Subtags Output](https://github.com/prabha-coder/swagger-ui-express-subtags/blob/main/assets/Store_three_tree_view.png?raw=true)
